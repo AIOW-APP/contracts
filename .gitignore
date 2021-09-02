@@ -1,0 +1,10 @@
+node_modules
+cache
+artifacts
+coverage*
+deployment_exports/dev.json
+**/.DS_Store
+deployments/localhost/
+deployments/rinkeby/
+.vscode
+.env

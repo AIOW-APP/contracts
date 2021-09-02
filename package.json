@@ -1,0 +1,24 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "test": "npx hardhat test test/*.spec.js",
+    "test:coverage": "npx hardhat coverage",
+    "test:gas": "REPORT_GAS=1 npx hardhat test test/*.spec.js",
+    "deploy:local": "npx hardhat --network hardhat node --export deployment_exports/dev.json --write true",
+    "deploy:rinkeby": "npx hardhat deploy --network rinkeby --export deployment_exports/rinkeby.json --write true",
+    "deploy:mainnet": "npx hardhat deploy --network mainnet --export deployment_exports/mainnet.json --write true --gasprice 80000000000"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.10",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.4.1",
+    "hardhat": "^2.2.1",
+    "hardhat-deploy": "^0.8.11",
+    "hardhat-deploy-ethers": "^0.3.0-beta.10",
+    "hardhat-gas-reporter": "^1.0.4",
+    "solidity-coverage": "^0.7.16"
+  }
+}
